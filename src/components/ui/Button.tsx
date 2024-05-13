@@ -1,5 +1,6 @@
+import React from "react";
 import { Tooltip } from "react-tooltip";
-import { IButton } from "@/types/types";
+import { IButton } from "../../types/Types";
 
 const Button = ({
   onClick,

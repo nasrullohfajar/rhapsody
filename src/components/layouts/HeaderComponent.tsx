@@ -1,5 +1,6 @@
 import { GoHomeFill, GoBell, GoPeople } from "react-icons/go";
 import Button from "@/components/ui/Button";
+import ButtonLink from "@/components//ui/ButtonLink";
 import SearchBar from "@/components/ui/SearchBar";
 import img from "@/assets/ubel.jpg";
 
@@ -7,10 +8,11 @@ const HeaderComponent = () => {
   return (
     <div className="flex h-16 py-2 px-6 bg-black w-full items-center justify-between">
       <div className="w-1/3">
-        <Button
+        <ButtonLink
+          link={"/home"}
           label="Home"
           icon={<GoHomeFill size={28} />}
-          className="bg-[#242424] rounded-full"
+          className="bg-[#242424] rounded-full w-11"
           isTooltip
           tooltipPlace="bottom"
         />
@@ -19,7 +21,8 @@ const HeaderComponent = () => {
       <SearchBar />
 
       <div className="flex items-center gap-4  w-1/3 justify-end">
-        <Button
+        <ButtonLink
+          link={"/notifications"}
           label="What's New"
           icon={<GoBell size={20} color="#959595" />}
           isTooltip
