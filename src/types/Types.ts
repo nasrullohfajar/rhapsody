@@ -27,3 +27,9 @@ export interface ISearchBar {
   icon?: React.ReactNode;
   className?: string;
 }
+
+export interface IModal {
+  isOpen: boolean;
+  className?: string;
+  children: React.ReactNode;
+}

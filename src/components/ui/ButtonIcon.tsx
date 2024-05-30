@@ -2,7 +2,7 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import { IButton } from "../../types/Types";
 
-const Button = ({
+const ButtonIcon = ({
   onClick,
   label,
   icon = null,
@@ -17,6 +17,7 @@ const Button = ({
       data-tooltip-id="tooltip-button"
       data-tooltip-content={label}
       data-tooltip-place={tooltipPlace}
+      data-tooltip-delay-show={1000}
       onClick={onClick}
       disabled={disabled}
       className={`${className} flex items-center justify-center p-2`}
@@ -34,4 +35,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default ButtonIcon;
