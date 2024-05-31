@@ -26,6 +26,8 @@ export interface ISearchBar {
   label?: string;
   icon?: React.ReactNode;
   className?: string;
+  inputSearch: string;
+  setInputSearch: Function;
 }
 
 export interface IModal {

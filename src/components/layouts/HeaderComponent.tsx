@@ -9,12 +9,11 @@ import img from "@/assets/ubel.jpg";
 
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [inputSearch, setInputSearch] = useState("");
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
-
-  console.log(handleOpen);
 
   return (
     <div className="flex h-16 py-2 px-6 bg-black w-full items-center justify-between">
@@ -29,7 +28,7 @@ const HeaderComponent = () => {
         />
       </div>
 
-      <SearchBar />
+      <SearchBar inputSearch={inputSearch} setInputSearch={setInputSearch} />
 
       <div className="flex items-center gap-4  w-1/3 justify-end">
         <ButtonLink
