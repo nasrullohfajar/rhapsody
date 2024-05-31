@@ -18,7 +18,7 @@ const ButtonLink = ({
         data-tooltip-id="tooltip-buttonlink"
         data-tooltip-content={label}
         data-tooltip-place={tooltipPlace}
-        data-tooltip-delay-show={1000}
+        data-tooltip-delay-show={500}
         className={`${className} flex items-center justify-center p-2`}
       >
         {icon && <span>{icon}</span>}

@@ -22,7 +22,7 @@ const HeaderComponent = () => {
           link={"/home"}
           label="Home"
           icon={<GoHomeFill size={28} />}
-          className="bg-[#242424] rounded-full w-11"
+          className="bg-[#242424] rounded-full w-11 icon-md"
           isTooltip
           tooltipPlace="bottom"
         />
@@ -34,19 +34,19 @@ const HeaderComponent = () => {
         <ButtonLink
           link={"/notifications"}
           label="What's New"
-          icon={<GoBell size={20} color="#959595" />}
+          icon={<GoBell size={20} className="icon-sm" />}
           isTooltip
         />
         <ButtonIcon
           label="Friend Activity"
-          icon={<GoPeople size={20} color="#959595" />}
+          icon={<GoPeople size={20} className="icon-sm" />}
           isTooltip
         />
         <div className="relative">
           <ButtonIcon
             label="nvce"
             img={img}
-            className="bg-center bg-cover "
+            className="bg-center bg-cover icon-md"
             onClick={handleOpen}
             isTooltip
           />

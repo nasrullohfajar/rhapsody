@@ -23,3 +23,17 @@
   min-height: 100vh;
   min-width: 100%;
 }
+
+.icon-sm {
+  color: #959595;
+}
+
+.icon-sm:hover {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.icon-md:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
