@@ -1,4 +1,3 @@
-import React from "react";
 import { ISearchBar } from "../../types/Types";
 
 const SearchBar = ({ className }: ISearchBar) => {

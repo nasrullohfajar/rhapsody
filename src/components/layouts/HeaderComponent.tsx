@@ -47,7 +47,7 @@ const HeaderComponent = () => {
           <ButtonIcon
             label="nvce"
             img={img}
-            className="bg-center bg-cover h-2"
+            className="bg-center bg-cover "
             onClick={handleOpen}
             isTooltip
           />

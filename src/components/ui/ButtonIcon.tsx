@@ -1,4 +1,3 @@
-import React from "react";
 import { Tooltip } from "react-tooltip";
 import { IButton } from "../../types/Types";
 
@@ -30,7 +29,17 @@ const ButtonIcon = ({
           className="h-8 w-8 rounded-full object-cover"
         />
       )}
-      {isTooltip && <Tooltip id="tooltip-button" />}
+      {isTooltip && (
+        <Tooltip
+          id="tooltip-button"
+          style={{
+            padding: "4px 8px",
+            zIndex: 99,
+            boxShadow:
+              "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+          }}
+        />
+      )}
     </button>
   );
 };
