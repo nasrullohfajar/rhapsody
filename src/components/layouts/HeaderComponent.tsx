@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { GoHomeFill, GoBell, GoPeople } from "react-icons/go";
+import { useLocation } from "react-router-dom";
+import { GoHomeFill, GoHome, GoBell, GoPeople } from "react-icons/go";
 import ButtonIcon from "@/components/ui/ButtonIcon";
 import ButtonLink from "@/components/ui/ButtonLink";
 import ButtonText from "@/components/ui/ButtonText";
@@ -10,6 +11,10 @@ import img from "@/assets/ubel.jpg";
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [inputSearch, setInputSearch] = useState("");
+
+  const location = useLocation();
+
+  console.log(location.pathname);
 
   const labels = [
     "Account",
@@ -29,7 +34,13 @@ const HeaderComponent = () => {
         <ButtonLink
           link={"/home"}
           label="Home"
-          icon={<GoHomeFill size={28} />}
+          icon={
+            location.pathname == "/home" ? (
+              <GoHomeFill size={28} />
+            ) : (
+              <GoHome size={28} />
+            )
+          }
           className="bg-[#242424] rounded-full w-11 icon-md"
           isTooltip
           tooltipPlace="bottom"
