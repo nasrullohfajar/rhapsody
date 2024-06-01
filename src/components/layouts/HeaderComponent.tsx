@@ -11,6 +11,14 @@ const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [inputSearch, setInputSearch] = useState("");
 
+  const labels = [
+    "Account",
+    "Profile",
+    "Private Session",
+    "Setting",
+    "Log Out",
+  ];
+
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
@@ -54,34 +62,15 @@ const HeaderComponent = () => {
           <Modal
             isOpen={isOpen}
             className="p-1 flex-col"
-            children={
-              <>
-                <ButtonText
-                  label="Account"
-                  className="hover:bg-[#3e3e3e] rounded-sm w-[216px] text-sm p-3"
-                />
-
-                <ButtonText
-                  label="Profile"
-                  className="hover:bg-[#3e3e3e] rounded-sm w-[216px] text-sm p-3"
-                />
-
-                <ButtonText
-                  label="Private Session"
-                  className="hover:bg-[#3e3e3e] rounded-sm w-[216px] text-sm p-3"
-                />
-
-                <ButtonText
-                  label="Setting"
-                  className="hover:bg-[#3e3e3e] rounded-sm w-[216px] text-sm p-3"
-                />
-
-                <ButtonText
-                  label="Log Out"
-                  className="hover:bg-[#3e3e3e] rounded-sm w-[216px] text-sm p-3 border-t-[1px] border-[#3e3e3e]"
-                />
-              </>
-            }
+            children={labels.map((label) => (
+              <ButtonText
+                key={label}
+                label={label}
+                className={`hover:bg-[#3e3e3e] rounded-sm w-[216px] text-sm p-3 ${
+                  label === "Log Out" ? "border-t-[1px] border-[#3e3e3e]" : ""
+                }`}
+              />
+            ))}
           />
         </div>
       </div>
